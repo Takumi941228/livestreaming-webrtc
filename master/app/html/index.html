@@ -6,7 +6,7 @@
 <script src="webrtcstreamer.js" ></script>
 <script>        
     var webRtcServer      = new WebRtcStreamer("video",location.protocol+"//"+window.location.hostname+":8000");
-    window.onload         = function() { webRtcServer.connect("rtsp://pi2.local:8554/unicast") }
+    window.onload         = function() { webRtcServer.connect("rtsp://localhost:8554/unicast") }
     window.onbeforeunload = function() { webRtcServer.disconnect() }
 </script>
 </head>
