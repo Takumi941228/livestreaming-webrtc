@@ -1,0 +1,12 @@
+version: '3'
+services:
+  webrtc:
+    stdin_open: true
+    build:
+      context: .
+    container_name: master-server
+    working_dir: "/app"
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app/html/index.html:/app/html/index.html

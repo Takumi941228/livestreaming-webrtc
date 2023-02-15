@@ -1,0 +1,1 @@
+FROM mpromonet/v4l2rtspserver:latest

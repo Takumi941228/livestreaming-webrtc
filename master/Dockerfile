@@ -1,0 +1,1 @@
+FROM mpromonet/webrtc-streamer:latest
