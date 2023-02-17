@@ -10,6 +10,8 @@ services:
       - 8000:8000
     volumes:
       - ./master/app/html/index.html:/app/html/index.html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   rtsp:
     stdin_open: true
     build:
@@ -19,5 +21,7 @@ services:
     ports:
       - 8554:8554
     command: -G 640x480x30 -S
-    #devices:
-      #- "/dev/video0:/dev/video0"
+    devices:
+      - "/dev/video0:/dev/video0"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

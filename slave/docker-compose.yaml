@@ -8,6 +8,6 @@ services:
     working_dir: "/app"
     ports:
       - 8554:8554
-    command: -G 640x480x30 -S
-    #devices:
-      #- "/dev/video0:/dev/video0"
+    command: -G 640x480x12 -S
+    devices:
+      - "/dev/video0:/dev/video0"
