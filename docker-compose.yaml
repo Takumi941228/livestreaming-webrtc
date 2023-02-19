@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./master/app/html/index.html:/app/html/index.html
+      - ./master/app/html:/app/html
     extra_hosts:
       - "host.docker.internal:host-gateway"
   rtsp:
