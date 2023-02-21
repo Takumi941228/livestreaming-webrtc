@@ -4,7 +4,7 @@ services:
     stdin_open: true
     build:
       context: .
-    container_name: slave-camera
+    container_name: slave-server
     working_dir: "/app"
     ports:
       - 8554:8554
