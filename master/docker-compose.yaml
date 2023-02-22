@@ -9,4 +9,4 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./app/html/index.html:/app/html/index.html
+      - ./app/html/:/app/html/
