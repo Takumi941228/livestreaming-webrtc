@@ -6,9 +6,9 @@ services:
       context: master
     container_name: master-server
     working_dir: "/app"
-    network_mode: "host"
-    ports:
-      - 8000:8000
+    net: "host"
+    #ports:
+    #  - 8000:8000
     volumes:
       - ./master/app/html:/app/html
     extra_hosts:
@@ -19,7 +19,6 @@ services:
       context: slave
     container_name: slave-camera
     working_dir: "/app"
-    network_mode: "host"
     ports:
       - 8554:8554
     command: -G 640x480x30 -S
