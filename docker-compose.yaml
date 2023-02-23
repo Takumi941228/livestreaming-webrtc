@@ -17,12 +17,10 @@ services:
     stdin_open: true
     build:
       context: slave
-    container_name: slave-camera
+    container_name: slave-server
     working_dir: "/app"
     ports:
       - 8554:8554
-    command: -G 640x480x30 -S
+    command: -G 640x480x12 -S
     devices:
       - "/dev/video0:/dev/video0"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
