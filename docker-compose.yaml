@@ -7,8 +7,6 @@ services:
     container_name: master-server
     working_dir: "/app"
     network_mode: "host"
-    #ports:
-    #  - 8000:8000
     volumes:
       - ./master/app/html:/app/html
     extra_hosts:
@@ -24,3 +22,5 @@ services:
     command: -G 640x480x12 -S
     devices:
       - "/dev/video0:/dev/video0"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

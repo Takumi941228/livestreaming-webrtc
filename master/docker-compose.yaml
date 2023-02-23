@@ -6,7 +6,8 @@ services:
       context: .
     container_name: master-server
     working_dir: "/app"
-    ports:
-      - 8000:8000
+    network_mode: "host"
     volumes:
-      - ./app/html/:/app/html/
+      - ./master/app/html:/app/html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
