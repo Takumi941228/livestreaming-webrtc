@@ -6,7 +6,7 @@ services:
       context: master
     container_name: master-server
     working_dir: "/app"
-    net: "host"
+    network_mode: "host"
     #ports:
     #  - 8000:8000
     volumes:
